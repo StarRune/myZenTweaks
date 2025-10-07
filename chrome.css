@@ -1,116 +1,116 @@
-﻿/*!* Tab switch animation *!*/
+﻿/* Tab switch animation */
 
-/*:root {*/
-/*    !* ===== EXPRESSIVE — SPATIAL (position/scale/rotate) ===== *!*/
-/*    --ease-motion-extra-fast:   350ms cubic-bezier(0.42, 1.67, 0.21, 0.90);*/
-/*    --ease-motion-extra:        500ms cubic-bezier(0.38, 1.21, 0.22, 1.00);*/
-/*    --ease-motion-extra-slow:   650ms cubic-bezier(0.39, 1.29, 0.35, 0.98);*/
+:root {
+    /* ===== EXPRESSIVE — SPATIAL (position/scale/rotate) ===== */
+    --ease-motion-extra-fast:   350ms cubic-bezier(0.42, 1.67, 0.21, 0.90);
+    --ease-motion-extra:        500ms cubic-bezier(0.38, 1.21, 0.22, 1.00);
+    --ease-motion-extra-slow:   650ms cubic-bezier(0.39, 1.29, 0.35, 0.98);
 
 
-/*    !* ===== EXPRESSIVE — EFFECTS (opacity/blur/shadow) ===== *!*/
-/*    --ease-effects-extra-fast:  150ms cubic-bezier(0.31, 0.94, 0.34, 1.00);*/
-/*    --ease-effects-extra:       200ms cubic-bezier(0.34, 0.80, 0.34, 1.00);*/
-/*    --ease-effects-extra-slow:  300ms cubic-bezier(0.34, 0.88, 0.34, 1.00);*/
+    /* ===== EXPRESSIVE — EFFECTS (opacity/blur/shadow) ===== */
+    --ease-effects-extra-fast:  150ms cubic-bezier(0.31, 0.94, 0.34, 1.00);
+    --ease-effects-extra:       200ms cubic-bezier(0.34, 0.80, 0.34, 1.00);
+    --ease-effects-extra-slow:  300ms cubic-bezier(0.34, 0.88, 0.34, 1.00);
 
-/*    !* ===== STANDARD — SPATIAL ===== *!*/
-/*    !* Note: all three speeds share the same curve; only duration changes. *!*/
-/*    --ease-spatial:             cubic-bezier(0.27, 1.06, 0.18, 1.00);*/
+    /* ===== STANDARD — SPATIAL ===== */
+    /* Note: all three speeds share the same curve; only duration changes. */
+    --ease-spatial:             cubic-bezier(0.27, 1.06, 0.18, 1.00);
 
-/*    --ease-motion-fast:  350ms cubic-bezier(0.27, 1.06, 0.18, 1.00);*/
-/*    --ease-motion:       500ms cubic-bezier(0.27, 1.06, 0.18, 1.00);*/
-/*    --ease-motion-slow:  750ms cubic-bezier(0.27, 1.06, 0.18, 1.00);*/
+    --ease-motion-fast:  350ms cubic-bezier(0.27, 1.06, 0.18, 1.00);
+    --ease-motion:       500ms cubic-bezier(0.27, 1.06, 0.18, 1.00);
+    --ease-motion-slow:  750ms cubic-bezier(0.27, 1.06, 0.18, 1.00);
 
-/*    --ease-effects-fast: 150ms  cubic-bezier(0.31, 0.94, 0.34, 1.00);*/
-/*    --ease-effects:      200ms  cubic-bezier(0.34, 0.80, 0.34, 1.00);*/
-/*    --ease-effects-slow: 500ms  cubic-bezier(0.34, 0.88, 0.34, 1.00);*/
-/*    --ease-effects-very-slow: 700ms  cubic-bezier(0.34, 0.88, 0.34, 1.00);*/
-/*}*/
+    --ease-effects-fast: 150ms  cubic-bezier(0.31, 0.94, 0.34, 1.00);
+    --ease-effects:      200ms  cubic-bezier(0.34, 0.80, 0.34, 1.00);
+    --ease-effects-slow: 500ms  cubic-bezier(0.34, 0.88, 0.34, 1.00);
+    --ease-effects-very-slow: 700ms  cubic-bezier(0.34, 0.88, 0.34, 1.00);
+}
 
-/*#tabbrowser-tabpanels > hbox:not([zen-split="true"]):not(:has(.zen-glance-background)) {*/
-/*    transition: opacity var(--ease-effects-slow), transform var(--ease-motion-extra), filter var(--ease-effects-slow) !important;*/
-/*    transform: scale(0.985)!important;*/
-/*    filter: brightness(0.5);*/
-/*    opacity: 0.0;*/
-/*}*/
+#tabbrowser-tabpanels > hbox:not([zen-split="true"]):not(:has(.zen-glance-background)) {
+    transition: opacity var(--ease-effects-slow), transform var(--ease-motion-extra), filter var(--ease-effects-slow) !important;
+    transform: scale(0.985)!important;
+    filter: brightness(0.5);
+    opacity: 0.0;
+}
 
-/*#tabbrowser-tabpanels > hbox.deck-selected:not([zen-split="true"]) {*/
-/*    transition: opacity var(--ease-effects-slow), transform var(--ease-motion-extra), filter var(--ease-effects-slow) !important;*/
-/*    transform: scale(1) !important;*/
-/*    filter: brightness(1.001);*/
-/*    opacity: 1 !important;*/
-/*    z-index: 1;*/
-/*    border-radius: inherit;*/
-/*}*/
+#tabbrowser-tabpanels > hbox.deck-selected:not([zen-split="true"]) {
+    transition: opacity var(--ease-effects-slow), transform var(--ease-motion-extra), filter var(--ease-effects-slow) !important;
+    transform: scale(1) !important;
+    filter: brightness(1.001);
+    opacity: 1 !important;
+    z-index: 1;
+    border-radius: inherit;
+}
 
-/*#tabbrowser-tabpanels > hbox:not([zen-split="true"]):not(:has(.zen-glance-background)) {*/
-/*    position: relative;*/
-/*    */
-/*    */
-/*    !*&:after{*!*/
-/*    !*    border-radius: inherit;*!*/
-/*    !*    content: "";*!*/
-/*    !*    position: absolute;*!*/
-/*    !*    top: 0;*!*/
-/*    !*    left: 0;*!*/
-/*    !*    width: 100%;*!*/
-/*    !*    height: 100%;*!*/
-/*    !*    background: transparent;*!*/
-/*    !*    box-shadow: inset 1px 1px 0px oklch(from var(--zen-primary-color) calc(l*2) calc(c*2) h / 0.5),*!*/
-/*    !*    inset -1px -1px 1px oklch(from var(--zen-primary-color) calc(l*0.8) calc(c*2) h / 0.5);*!*/
-/*    !*    z-index: 5;*!*/
-/*    !*    pointer-events: none;*!*/
-/*    !*}*!*/
-/*}*/
+#tabbrowser-tabpanels > hbox:not([zen-split="true"]):not(:has(.zen-glance-background)) {
+    position: relative;
+    
+    
+    /*&:after{*/
+    /*    border-radius: inherit;*/
+    /*    content: "";*/
+    /*    position: absolute;*/
+    /*    top: 0;*/
+    /*    left: 0;*/
+    /*    width: 100%;*/
+    /*    height: 100%;*/
+    /*    background: transparent;*/
+    /*    box-shadow: inset 1px 1px 0px oklch(from var(--zen-primary-color) calc(l*2) calc(c*2) h / 0.5),*/
+    /*    inset -1px -1px 1px oklch(from var(--zen-primary-color) calc(l*0.8) calc(c*2) h / 0.5);*/
+    /*    z-index: 5;*/
+    /*    pointer-events: none;*/
+    /*}*/
+}
 
-/*@keyframes urlbarpopup {*/
-/*    from {*/
-/*        opacity: 0 !important;*/
-/*        transform: translateY(10px);*/
-/*        background-color: transparent !important;*/
-/*        --zen-urlbar-background-base: transparent !important;*/
-/*    }*/
-/*}*/
-/*#urlbar{*/
-/*    max-height: 50px;*/
-/*    !*overflow: hidden !important;*!*/
-/*    z-index: 1000;*/
-/*    */
-/*}*/
-/*#urlbar[open]{*/
-/*    max-height: 100ch !important;*/
-/*    animation: urlbarpopup var(--ease-motion-slow) forwards;*/
-/*    transition: max-height 500ms, top var(--ease-motion-slow), opacity var(--ease-motion-slow);*/
-/*    opacity: 1;*/
-/*}*/
+@keyframes urlbarpopup {
+    from {
+        opacity: 0 !important;
+        transform: translateY(10px);
+        background-color: transparent !important;
+        --zen-urlbar-background-base: transparent !important;
+    }
+}
+#urlbar{
+    max-height: 50px;
+    /*overflow: hidden !important;*/
+    z-index: 1000;
+    
+}
+#urlbar[open]{
+    max-height: 100ch !important;
+    animation: urlbarpopup var(--ease-motion-slow) forwards;
+    transition: max-height 500ms, top var(--ease-motion-slow), opacity var(--ease-motion-slow);
+    opacity: 1;
+}
 
-/*#urlbar .urlbar-background{*/
-/*    opacity: 0;*/
-/*}*/
-/*#urlbar[open][breakout-extend="true"] .urlbar-background{*/
-/*    transition: opacity var(--ease-effects-slow);*/
-/*    opacity: 1;*/
-/*    background: var(--zen-main-browser-background) !important;*/
-/*    outline: none !important;*/
-/*    position: relative;*/
-/*    backdrop-filter: blur(10px) !important;*/
+#urlbar .urlbar-background{
+    opacity: 0;
+}
+#urlbar[open][breakout-extend="true"] .urlbar-background{
+    transition: opacity var(--ease-effects-slow);
+    opacity: 1;
+    background: var(--zen-main-browser-background) !important;
+    outline: none !important;
+    position: relative;
+    backdrop-filter: blur(10px) !important;
 
-/*    will-change: backdrop-filter !important;*/
-/*    transform: translateZ(0) !important;*/
-/*    isolation: isolate !important;*/
-/*    &:after{*/
-/*        border-radius: inherit;*/
-/*        content: "";*/
-/*        position: absolute;*/
-/*        top: 0;*/
-/*        left: 0;*/
-/*        width: 100%;*/
-/*        height: 100%;*/
-/*        background: transparent;*/
-/*        box-shadow: inset 1px 1px 0px oklch(from var(--zen-primary-color) calc(l*2) calc(c*2) h / 0.5),*/
-/*        inset -1px -1px 1px oklch(from var(--zen-primary-color) calc(l*0.8) calc(c*2) h / 0.5);*/
-/*        z-index: 500;*/
-/*        pointer-events: none;   */
+    will-change: backdrop-filter !important;
+    transform: translateZ(0) !important;
+    isolation: isolate !important;
+    &:after{
+        border-radius: inherit;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        box-shadow: inset 1px 1px 0px oklch(from var(--zen-primary-color) calc(l*2) calc(c*2) h / 0.5),
+        inset -1px -1px 1px oklch(from var(--zen-primary-color) calc(l*0.8) calc(c*2) h / 0.5);
+        z-index: 500;
+        pointer-events: none;   
 
-/*    }*/
-/*}*/
+    }
+}
 
